@@ -1,0 +1,193 @@
+.main{
+  display:grid;
+  grid-template-columns: 0.6fr 2fr; /** two columns **/
+  grid-template-rows: 1fr 9fr 1fr; /** three rows **/
+  height:100%;
+  width:100%;
+  margin:0px;
+  background-color:#EF233C;
+}
+/*----------------SIDE BAR HEADER AND LOGO---------------------*/
+.sideBarHeader{
+  grid-column-start:1;
+  grid-column-end:2;
+  grid-row-start:1;
+  grid-row-end:2;
+  height:100%;
+  width:99%;
+  background-color:#EF233C;
+}
+.logoDiv{
+  padding:0px;
+  margin:0px;
+  background-color:light orange;
+  width:100%;
+  height:110px;
+}
+#logo {
+	width: 110px;
+	height: 110px;
+	object-fit: contain;
+	margin:0px;
+	padding:0px;
+}
+/*-------------------MAP------------------*/
+#map {
+  height: 100%;
+  width: 100%;   
+  grid-column-start:2;
+  grid-column-end:3;
+  grid-row-start:1;
+  grid-row-end:3;
+}
+.mapDiv{
+  background-color:white;
+}
+/*-------------------MAIN SIDE BAR------------------*/
+.sideBarMain{
+  background-color:#EF233C;
+  height:100%;
+  width:98%;
+}
+/*-------------------NAVIGATION------------------*/
+.navHeaderDiv{
+  width:100%;
+  height:36px;
+  margin-bottom:2px;
+}
+.navHeader{
+  width:100%;
+  height:100%;
+  border-radius: 8px 8px 0px 0px;
+  border:0px;
+background: #2B2D42;
+  font-weight:bolder;
+  font-size:15px;
+  color:white;
+  letter-spacing: 1.5px;
+  
+}
+#shopNavHeader{
+  margin-bottom:3px;
+}
+.entireNavDiv{
+  display:flex;
+  background-color:light blue;
+  width:100%;
+  height:70px;
+  justify-content: space-between;
+  align-items:stretch;
+  flex-grow:1;
+  margin-bottom:3px;
+  margin-left:0px;
+  
+}
+.startNavDiv, .endNavDiv{
+  height:95%;
+  padding:0px;
+  margin:0px;
+  width:100%;
+}
+#startNavBtn, #endNavBtn{
+  height:100%;
+  width:98%;
+  border:0px;
+  font-weight:bold;
+   cursor: pointer;
+  background-color:#596e91;
+  color:white;
+  font-size:15px;
+}
+#startNavBtn{
+  margin-right:4px;
+}
+#endNavBtn{
+  margin-left:2px;
+}
+#startNavBtn:hover{
+  background-color: #425980;
+  color:#b3ffda;
+}
+#endNavBtn:hover{
+  background-color: #425980;
+  color:#ffb8b8;
+}
+/*----------#abbad3---------DROPDOWN SECTION------------------*/
+.dropdownSection{
+  display:flex;
+  flex-direction: column;
+}
+.Dropdown {
+  position: relative;
+  display: inline-block;
+  background-color:#EF233C;
+  text-align:center;
+}
+.dropdownBtnDiv{
+  width:100%;
+}
+.dropdownTriggerBtn {
+  background-color: white;
+  color: #CC0030;
+  padding: 15px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  width:100%;
+  font-weight:bold;
+  margin-bottom:4px;
+  height:43px;
+}
+.dropdownTriggerBtn:hover, .dropdownTriggerBtn:focus {
+  background-color: #2B2D42;
+  color:white;
+}
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #e7edf4;
+  /**min-width: 160px;**/
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+  z-index: 1;
+  margin-top:49px;
+  text-align:center;
+  
+}
+
+#foodDropdownMenu, #homeDropdownMenu, #medicalDropdownMenu, #storeDropdownMenu{
+  bottom:100%;
+}
+
+.dropdownContent a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdownItemDiv a:hover{
+  background-color:purple;
+}
+.Dropdown a:hover {
+	background-color: white;
+  color:black;
+}
+.show {
+	display: block;
+}
+/*-------------------FOOTER------------------*/
+footer{
+  width:100%;
+  background-color:#2B2D42;
+  height: 100%;
+  grid-column-start:1;
+  grid-column-end: 3;
+}
+.footerMain{
+  background-color:#2B2D42;
+  display:flex;
+  align-content:space-around;
+}
+.footerLinks{
+	flex: 1;
+}

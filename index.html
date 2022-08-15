@@ -1,0 +1,236 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>NearBuy</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://js.arcgis.com/4.24/esri/themes/light/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+  <script src="https://js.arcgis.com/4.24/"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+  <section class="main">
+    <div class="sideBarHeader" style="text-align: center;">
+      <div class="logoDiv">
+        <img id="logo" src="assets/blackLogo.png"> 
+      </div>
+    </div>
+
+    <div id="map" class="mapDiv mr-1 ml-1"></div>
+
+    <div class="sideBarMain ml-1  ">
+      <!-- nav header-->
+      <div class="navHeaderDiv">
+        <button class="navHeader">NAVIGATION</button>
+      </div>
+      
+      <!-- navigation bar -->
+      <div class="entireNavDiv">
+      	<div class="startNavDiv">
+        	<button id="startNavBtn">START</button>
+      	</div>
+      	<div class="endNavDiv">
+        	<button id="endNavBtn">END</button>
+      	</div>
+    	</div>
+      <!-- nav header-->
+      <div class="navHeaderDiv" id="shopNavHeader">
+        <button class="navHeader" >SHOP NearBuy</button>
+      </div>
+      <!--All dropdown sections-->
+      <div class="dropdownSection">
+        <!------------------------Activity-------------------->
+        <div class="Dropdown ">
+          <div class="dropdownBtnDiv">
+            <button class="dropdownTriggerBtn" id="activityDropdown">
+              ACTIVITY
+            </button>
+          </div>
+
+          <div class="dropdownContent" id="activityDropdownMenu">
+            <div class="dropdownItemDiv">
+              <a class="dropdownItem">Bookstore</a>
+              <a class="dropdownItem">Fitness Center</a>
+              <a class="dropdownItem">Shopping Center</a>
+            </div>
+          </div>
+        </div>				
+
+				<!--------------------------Auto------------------------->
+        <div class="Dropdown ">
+          <div class="dropdownBtnDiv">
+            <button class="dropdownTriggerBtn" id="autoDropdown">
+              AUTO
+            </button>
+          </div>
+
+          <div class="dropdownContent" id="autoDropdownMenu">
+            <div class="dropdownItemDiv">
+              <a class="dropdownItem">Auto Dealership</a>
+              <a class="dropdownItem">Auto Maintenance</a>
+              <a class="dropdownItem">Auto Parts</a>
+              <a class="dropdownItem">Car Wash</a>
+              <a class="dropdownItem">Gas Station</a>
+              <a class="dropdownItem">Motorcycle Shop</a>
+              <a class="dropdownItem">Tire Store</a>
+              <a class="dropdownItem">Used Car Dealership</a>
+            </div>
+          </div>
+        </div>
+
+        <!--------------------------Beauty---------------------------->
+        <div class="Dropdown ">
+          <div class="dropdownBtnDiv">
+            <button class="dropdownTriggerBtn" id="beautyDropdown">
+              BEAUTY
+            </button>
+          </div>
+
+          <div class="dropdownContent" id="beautyDropdownMenu">
+            <div class="dropdownItemDiv">
+              <a class="dropdownItem">Beauty Salon</a>
+              <a class="dropdownItem">Jewelry</a>
+              <a class="dropdownItem">Spa</a>
+            </div>
+          </div>
+        </div>
+        <!--------------------Clothes-------------------->
+        <div class="Dropdown ">
+          <div class="dropdownBtnDiv">
+            <button class="dropdownTriggerBtn" id="clothesDropdown">
+              CLOTHES
+            </button>
+          </div>
+
+          <div class="dropdownContent" id="clothesDropdownMenu">
+            <div class="dropdownItemDiv">
+              <a class="dropdownItem">Childrens Apparel</a>
+              <a class="dropdownItem">Clothing Store</a>
+              <a class="dropdownItem">Footwear</a>
+              <a class="dropdownItem">Laundry</a>
+              <a class="dropdownItem">Mens Apparel</a>
+              <a class="dropdownItem">Womens Apparel</a>
+            </div>
+          </div>
+        </div>        
+
+        <!---------------------Finance--------------------->
+        <div class="Dropdown ">
+          <div class="dropdownBtnDiv">
+            <button class="dropdownTriggerBtn" id="financeDropdown">
+              FINANCE
+            </button>
+          </div>
+
+          <div class="dropdownContent" id="financeDropdownMenu">
+            <div class="dropdownItemDiv">
+              <a class="dropdownItem">ATM</a>
+              <a class="dropdownItem">Bank</a>
+              <a class="dropdownItem">Business Facility</a>
+            </div>
+          </div>
+        </div>
+				<!--------------------Food------------------>
+        <div class="Dropdown ">
+          <div class="dropdownBtnDiv">
+            <button class="dropdownTriggerBtn" id="foodDropdown">
+              FOOD
+            </button>
+          </div>
+
+          <div class="dropdownContent" id="foodDropdownMenu">
+            <div class="dropdownItemDiv">
+              <a class="dropdownItem">Candy Store</a>
+              <a class="dropdownItem">Convenience Store</a>
+              <a class="dropdownItem">Grocery</a>
+              <a class="dropdownItem">Wine and Liquor</a>
+            </div>
+          </div>
+        </div>
+				<!------------------Home Improvement---------------->
+        <div class="Dropdown ">
+          <div class="dropdownBtnDiv">
+            <button class="dropdownTriggerBtn" id="homeDropdown">
+              HOME
+            </button>
+          </div>
+
+          <div class="dropdownContent" id="homeDropdownMenu">
+            <div class="dropdownItemDiv">
+              <a class="dropdownItem">Electrical</a>
+              <a class="dropdownItem">Furniture Store</a>
+              <a class="dropdownItem">Home Improvement Store</a>
+              <a class="dropdownItem">Office Supplies Store</a>
+              <a class="dropdownItem">Plumbing</a>
+              <a class="dropdownItem">Repair Services</a>
+            </div>
+          </div>
+        </div>
+        <!---------------Medical-------------->
+        <div class="Dropdown ">
+          <div class="dropdownBtnDiv">
+            <button class="dropdownTriggerBtn" id="medicalDropdown">
+              MEDICAL
+            </button>
+          </div>
+
+          <div class="dropdownContent" id="medicalDropdownMenu">
+            <div class="dropdownItemDiv">
+              <a class="dropdownItem">Optical</a>
+              <a class="dropdownItem">Pharmacy</a>
+            </div>
+          </div>
+				</div>
+				<!--------------Stores & Shops---------------->
+        <div class="Dropdown">
+          <div class="dropdownBtnDiv">
+            <button class="dropdownTriggerBtn" id="storeDropdown">
+              STORES & SHOPS
+            </button>
+          </div>
+
+          <div class="dropdownContent" id="storeDropdownMenu">
+            <div class="dropdownItemDiv">
+              <a class="dropdownItem">Consumer Electronics Store</a>
+              <a class="dropdownItem">Department Store</a>
+              <a class="dropdownItem">Market</a>
+              <a class="dropdownItem">Mobile Phone Shop</a>
+              <a class="dropdownItem">Pet Store</a>
+              <a class="dropdownItem">Specialty Store</a>
+              <a class="dropdownItem">Toy Store</a>
+              <a class="dropdownItem">Wholesale Warehouse</a>
+            </div>
+          </div>
+        </div>        
+
+      </div>
+    
+    	
+    </div>
+
+    <footer>
+      <div class="footerMain">
+        <div class="footerLinks">
+          <a href="https://developers.arcgis.com/javascript/latest/">ArcGIS API</a>
+        </div>
+        <div class="footerLinks">
+          <a href="https://imgur.com/gallery/yed5Zfk">About Us</a>
+        </div>
+        <div class="footerLinks">
+          <a href="https://imgur.com/gallery/yed5Zfk">Contact</a>
+        </div>
+      </div>
+
+    </footer>
+  </section>
+
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
