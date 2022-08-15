@@ -11,7 +11,7 @@ require([
 	"esri/rest/support/FeatureSet"
 ], (esriConfig, Map, MapView, locator, Graphic, route, RouteParameters, FeatureSet) => {
 
-	esriConfig.apiKey = "AAPK2cc14671cd5d44fda5415221fc29213dVhK79LmcF26YEBf7iNaMrQtBb_tqiIkNdYmnKsVx9UDi10YzgPfiJ88pIcZgoEHe";
+	esriConfig.apiKey = "#your api key#";
 
 	const map = new Map({
 		basemap: "arcgis-navigation" //Basemap layer services: https://developers.arcgis.com/documentation/mapping-apis-and-services/visualization/basemap-styles/
