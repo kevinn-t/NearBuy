@@ -1,7 +1,6 @@
 # Nearbuy
 
-Good luck getting another API key
-I was not in charge of that when this was made
+API Key provided by ArcGIS Online
 
 Contributors:
 Pansy Kuang
